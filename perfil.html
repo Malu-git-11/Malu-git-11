@@ -52,6 +52,26 @@
         <p>© 2025 Feito por Maria Luiza Mendes, Maria Luisa de Paula e Giovanna Valero</p>
     </footer>
 
+  <script>
+    // Seleciona os elementos
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  // Abre/fecha o menu no mobile
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+  
+  // Fecha o menu quando clicar em um link
+  const links = menu.querySelectorAll("a");
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+  });
+
+  </script>
+
 </body>
 
 </html>
