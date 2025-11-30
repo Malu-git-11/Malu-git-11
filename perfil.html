@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Map</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <link rel="stylesheet" href="perfil.css">
+  <script src="mapa.js" defer></script>
+
+  <link rel="manifest" href="manifest.json">
+  <script src="sw"></script>
+</head>
+
+<body>
+  <header>
+    <h1>GPP-Guaianases</h1>
+
+    <div class="menu-container">
+
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav class="menu" id="menu">
+        <a href="#"><button>Home</button></a>
+        <a href="#"><button>#</button></a>
+        <a href="#"><button>#</button></a>
+        <a href="#"><button>#</button></a>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <button onclick="findMe()">Minha Localização</button>
+  <div id="map"></div>
+
+  <p id="info"></p>
+  <button id="btnSair">Sair</button>
+
+  <footer>
+        <p>© 2025 Feito por Maria Luiza Mendes, Maria Luisa de Paula e Giovanna Valero</p>
+    </footer>
+
+</body>
+
+</html>

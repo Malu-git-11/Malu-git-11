@@ -1,0 +1,20 @@
+{
+  "name": "PWA Firebase Auth",
+  "short_name": "PWAAuth",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a74da",
+  "icons": [
+    {
+      "src": "assest/icon-git-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./assest/icon-git-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
