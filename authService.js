@@ -11,16 +11,30 @@ class FirebaseAuthService {
         this.#auth = getAuth(app);
     }
 
-    async criarUsuario(email, senha) {
-        return createUserWithEmailAndPassword(this.#auth, email, senha);
+    // ===================== CADASTRO =====================
+    criarUsuarioComEmailESenha(email, senha){
+        return createUserWithEmailAndPassword(this.#auth, email, senha)
+            .then((credencial) => {
+                console.log("Usuário criado:", credencial.user);
+                return { sucesso: true, usuario: credencial.user };
+            })
+            .catch((erro) => {
+                console.error("Erro ao criar usuário:", erro);
+                return { sucesso: false, erro };
+            });
     }
 
-    async login(email, senha) {
-        return signInWithEmailAndPassword(this.#auth, email, senha);
-    }
-
-    async logout() {
-        return signOut(this.#auth);
+    // ====================== LOGIN =======================
+    loginComEmailESenha(email, senha){
+        return signInWithEmailAndPassword(this.#auth, email, senha)
+            .then((credencial) => {
+                console.log("Login realizado:", credencial.user);
+                return { sucesso: true, usuario: credencial.user };
+            })
+            .catch((erro) => {
+                console.error("Erro ao fazer login:", erro);
+                return { sucesso: false, erro };
+            });
     }
 }
 
