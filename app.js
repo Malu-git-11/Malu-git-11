@@ -12,41 +12,47 @@ const firebaseConfig = {
   measurementId: "G-4N89CQH5ZW"
 };
 
-const app = initializeApp(firebaseConfig);
+// Inicializa Firebase
+const fbApp = initializeApp(firebaseConfig);
+getAnalytics(fbApp);
+const authService = new FirebaseAuthService(fbApp);
 
-const authService = new FirebaseAuthService(app);
+// Detecta o formulário correto
+const loginForm = document.getElementById("loginForm");
+const cadastroForm = document.getElementById("cadastroForm");
 
-// elementos
-const email = document.getElementById("email");
-const senha = document.getElementById("senha");
-const msg = document.getElementById("msg");
+// ========================= LOGIN =========================
+if (loginForm) {
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-// LOGIN
-document.getElementById("btnLogin").onclick = async () => {
-  try {
-    await authService.login(email.value, senha.value);
-    window.location.href = `perfil.html`;
-  } catch (error) {
-    msg.textContent = error.message;
-  }
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+
+    const resultado = await authService.loginComEmailESenha(email, senha);
+
+    if (resultado.sucesso) {
+      window.location.href = `profile.html?email=${encodeURIComponent(email)}`;
+    } else {
+      alert("Erro ao fazer login: " + resultado.erro.message);
+    }
+  });
 };
 
-// CADASTRO
-document.getElementById("btnCadastro").onclick = async () => {
-  try {
-    await authService.criarUsuario(email.value, senha.value);
-    window.location.href = `perfil.html`;
-  } catch (error) {
-    msg.textContent = error.message;
-  }
-};
+// ======================= CADASTRO ========================
+if (cadastroForm) {
+  cadastroForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-// SAIR
-document.getElementById("btnSair").onclick = async () => {
-  try {
-    await authService.logout();
-    window.location.href = `index.html`;
-  } catch (error) {
-    msg.textContent = error.message;
-  }
-};
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+
+    const resultado = await authService.criarUsuarioComEmailESenha(email, senha);
+
+    if (resultado.sucesso) {
+      window.location.href = `profile.html?email=${encodeURIComponent(email)}`;
+    } else {
+      alert("Erro ao cadastrar usuário: " + resultado.erro.message);
+    }
+  });
+}
