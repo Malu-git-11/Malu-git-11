@@ -32,7 +32,7 @@ if (loginForm) {
     const resultado = await authService.loginComEmailESenha(email, senha);
 
     if (resultado.sucesso) {
-      window.location.href = `profile.html?email=${encodeURIComponent(email)}`;
+      window.location.href = `perfil.html?email=${encodeURIComponent(email)}`;
     } else {
       alert("Erro ao fazer login: " + resultado.erro.message);
     }
@@ -50,7 +50,7 @@ if (cadastroForm) {
     const resultado = await authService.criarUsuarioComEmailESenha(email, senha);
 
     if (resultado.sucesso) {
-      window.location.href = `profile.html?email=${encodeURIComponent(email)}`;
+      window.location.href = `perfil.html?email=${encodeURIComponent(email)}`;
     } else {
       alert("Erro ao cadastrar usuário: " + resultado.erro.message);
     }
