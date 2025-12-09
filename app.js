@@ -42,11 +42,14 @@ document.getElementById("btnCadastro").onclick = async () => {
 };
 
 // SAIR
-document.getElementById("btnSair").onclick = async () => {
-  try {
-    await authService.logout();
-    window.location.href = `index.html`;
-  } catch (error) {
-    msg.textContent = error.message;
-  }
-};
+const btnSair = document.getElementById("btnSair");
+if (btnSair) {
+  btnSair.onclick = async () => {
+    try {
+      await authService.logout();
+      window.location.href = "index.html";
+    } catch (error) {
+      msg.textContent = error.message;
+    }
+  };
+}

@@ -1,7 +1,8 @@
 import {
     getAuth,
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    signOut
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
 class FirebaseAuthService {
