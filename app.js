@@ -47,7 +47,7 @@ if (btnSair) {
   btnSair.onclick = async () => {
     try {
       await authService.logout();
-      window.location.href = "index.html";
+      window.location.href = `index.html`;
     } catch (error) {
       msg.textContent = error.message;
     }
