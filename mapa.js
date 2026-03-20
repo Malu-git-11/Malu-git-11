@@ -7,7 +7,9 @@ if ('serviceWorker' in navigator) {
         .catch(err => console.log('Erro ao registrar Service Worker:', err));
 }
 
+// =====================
 // MAPA INICIAL (Prefeitura)
+// =====================
 const prefeituraCoords = [-23.5429, -46.4143];
 
 let map = L.map('map').setView(prefeituraCoords, 15);
@@ -23,7 +25,9 @@ const marcadorPrefeitura = L.marker(prefeituraCoords)
     .bindPopup("Prefeitura de Guaianases")
     .openPopup();
 
+// =====================
 // BOTÃO: MINHA LOCALIZAÇÃO
+// =====================
 function findMe() {
     if (!navigator.geolocation) {
         alert("Seu navegador não suporta localização");
@@ -31,27 +35,20 @@ function findMe() {
         return;
     }
 
-    navigator.geolocation.getCurrentPosition(
-        (position) => {
-            success(position); // usa a mesma função já existente
-        },
-        () => {
-            alert("Você não permitiu a localização.");
-            irParaPrefeitura();
-        }
-    );
-        navigator.geolocation.getCurrentPosition(success, error);
+    navigator.geolocation.getCurrentPosition(success, error);
 }
 
-
-
+// =====================
 // BOTÃO: VOLTAR PRA PREFEITURA
+// =====================
 function irParaPrefeitura() {
     map.setView(prefeituraCoords, 16);
     marcadorPrefeitura.openPopup();
 }
 
+// =====================
 // LOCALIZAÇÃO DO USUÁRIO
+// =====================
 let userMarker = null;
 let userCircle = null;
 
@@ -84,3 +81,60 @@ function error() {
     irParaPrefeitura();
 }
 
+// =====================
+// ÍCONES PERSONALIZADOS
+// =====================
+const iconeSaude = L.icon({
+    iconUrl: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
+    iconSize: [32, 32]
+});
+
+const iconeCultura = L.icon({
+    iconUrl: "https://maps.google.com/mapfiles/ms/icons/purple-dot.png",
+    iconSize: [32, 32]
+});
+
+const iconeEsporte = L.icon({
+    iconUrl: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
+    iconSize: [32, 32]
+});
+
+const iconeTrabalho = L.icon({
+    iconUrl: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+    iconSize: [32, 32]
+});
+
+const iconeSocial = L.icon({
+    iconUrl: "https://maps.google.com/mapfiles/ms/icons/orange-dot.png",
+    iconSize: [32, 32]
+});
+
+const iconeDireitos = L.icon({
+    iconUrl: "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+    iconSize: [32, 32]
+});
+
+// =====================
+// PONTOS NO MAPA
+// =====================
+const pontos = [
+    { lat: -23.5423, lng: -46.4088, nome: "Hospital Geral de Guaianases", icon: iconeSaude },
+    { lat: -23.5447, lng: -46.4125, nome: "UBS Guaianases II", icon: iconeSaude },
+    { lat: -23.5502, lng: -46.4162, nome: "UBS Guaianases", icon: iconeSaude },
+
+    { lat: -23.5436, lng: -46.4152, nome: "Casa de Cultura de Guaianases", icon: iconeCultura },
+
+    { lat: -23.5472, lng: -46.4045, nome: "CDC Serra Queimada", icon: iconeEsporte },
+
+    { lat: -23.5440, lng: -46.4120, nome: "CATE Guaianases", icon: iconeTrabalho },
+
+    { lat: -23.5435, lng: -46.4135, nome: "CRAS Guaianases", icon: iconeSocial },
+
+    { lat: -23.5505, lng: -46.6333, nome: "Ministério Público de SP", icon: iconeDireitos }
+];
+
+pontos.forEach(ponto => {
+    L.marker([ponto.lat, ponto.lng], { icon: ponto.icon })
+        .addTo(map)
+        .bindPopup(ponto.nome);
+});
