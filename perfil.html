@@ -33,9 +33,15 @@
 
       <nav class="menu" id="menu">
         <a href="#"><button>Home</button></a>
-        <a href="#"><button>#</button></a>
-        <a href="#"><button>#</button></a>
-        <a href="#"><button>#</button></a>
+        <div class="submenu-container">
+          <button id="btnCategorias">Categorias</button>
+
+          <div class="submenu" id="submenuCategorias">
+            <a href="saude.html">Equipamentos de saúde</a>
+            <a href="lazer.html">Lazer</a>
+            <a href="direitos.html">Direitos</a>
+          </div>
+        </div>
       </nav>
 
     </div>
@@ -66,6 +72,19 @@
       link.addEventListener("click", () => {
         menu.classList.remove("active");
       });
+    });
+    //SUBMENU CATEGORIAS
+    const btnCategorias = document.getElementById("btnCategorias");
+    const submenu = document.getElementById("submenuCategorias");
+
+    btnCategorias.addEventListener("click", (e) => {
+      e.stopPropagation(); // evita fechar imediatamente
+      submenu.classList.toggle("active");
+    });
+
+    // Fecha se clicar fora
+    document.addEventListener("click", () => {
+      submenu.classList.remove("active");
     });
   </script>
 
