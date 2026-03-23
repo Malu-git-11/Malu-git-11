@@ -25,9 +25,7 @@ const marcadorPrefeitura = L.marker(prefeituraCoords)
     .bindPopup("Prefeitura de Guaianases")
     .openPopup();
 
-// =====================
 // BOTÃO: MINHA LOCALIZAÇÃO
-// =====================
 function findMe() {
     if (!navigator.geolocation) {
         alert("Seu navegador não suporta localização");
@@ -38,17 +36,13 @@ function findMe() {
     navigator.geolocation.getCurrentPosition(success, error);
 }
 
-// =====================
 // BOTÃO: VOLTAR PRA PREFEITURA
-// =====================
 function irParaPrefeitura() {
     map.setView(prefeituraCoords, 16);
     marcadorPrefeitura.openPopup();
 }
 
-// =====================
 // LOCALIZAÇÃO DO USUÁRIO
-// =====================
 let userMarker = null;
 let userCircle = null;
 
@@ -81,9 +75,7 @@ function error() {
     irParaPrefeitura();
 }
 
-// =====================
 // ÍCONES PERSONALIZADOS
-// =====================
 const iconeSaude = L.icon({
     iconUrl: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
     iconSize: [32, 32]
