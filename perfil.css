@@ -13,7 +13,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
+
 
 /* HEADER */
 header {
@@ -70,10 +72,10 @@ nav button:hover {
   position: absolute;
   top: 45px;
   left: 0;
+  max-width: 90vw; /* impede passar da tela */
   background: white;
   border-radius: 8px;
   padding: 8px;
-  min-width: 180px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 2000;
 }
