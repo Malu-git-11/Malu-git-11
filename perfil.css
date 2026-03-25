@@ -16,7 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-
 /* HEADER */
 header {
   background: #0a3d62;
@@ -72,7 +71,7 @@ nav button:hover {
   position: absolute;
   top: 45px;
   left: 0;
-  max-width: 90vw; /* impede passar da tela */
+  max-width: 90vw;
   background: white;
   border-radius: 8px;
   padding: 8px;
@@ -152,31 +151,34 @@ footer {
   width: 100%;
 }
 
-/* RESPONSIVO */
+/* RESPONSIVIDADE (IGUAL AO SAUDE) */
 @media (max-width: 768px) {
 
+  /* mostra hamburguer */
+  .hamburger {
+    display: flex;
+  }
+
+  /* menu mobile */
   .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #f5f5f5;
     position: absolute;
-    top: 70px;
-    left: 0;
-    text-align: center;
-    z-index: 1000;
+    top: 80px;
+    right: 20px;
+    background: #0a3d62;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    z-index: 3000;
   }
 
   .menu.active {
     display: flex;
   }
 
-  .hamburger {
-    display: flex;
-  }
-
   nav button {
     width: 100%;
-    border-radius: 0;
+    text-align: left;
   }
 }

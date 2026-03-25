@@ -13,11 +13,11 @@ body {
 
 /* MAPA */
 #map {
-  width: 80%;
-  max-width: 900px;
-  height: 400px;
-  margin: 20px auto;
-  border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
 h1 {
@@ -193,4 +193,37 @@ nav button:hover {
 .horario.destaque {
     color: #22c55e;
     font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+    /* mostra o botão hamburguer */
+    .hamburger {
+        display: flex;
+    }
+
+    /* esconde o menu padrão */
+    .menu {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #0a3d62;
+        flex-direction: column;
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        display: none;
+        z-index: 3000;
+    }
+
+    /* quando ativado */
+    .menu.active {
+        display: flex;
+    }
+
+    nav button {
+        width: 100%;
+        text-align: left;
+    }
 }
