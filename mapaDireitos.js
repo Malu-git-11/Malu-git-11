@@ -26,72 +26,69 @@ document.addEventListener("click", () => {
     submenu.classList.remove("active");
 });
 
-// Coordenadas da Prefeitura de Guaianases (ponto de referência)
+// Coordenadas da Prefeitura
 const prefeitura = [-23.5426, -46.4143];
 
-// Inicializa o mapa
+// Inicializa mapa
 const map = L.map('map').setView(prefeitura, 14);
 
-// Camada do mapa
+// Camada
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap'
 }).addTo(map);
 
-
-// LOCAIS
+// LOCAIS (AGORA PADRÃO IGUAL AO CULTURA)
 
 // CATE
-L.marker([-23.5415, -46.4118], { icon })
-    .addTo(map)
+L.marker([-23.5415, -46.4118]).addTo(map)
     .bindPopup("<b>CATE Guaianases</b><br>Hipólito de Camargo, 479");
 
 // CRAS
-L.marker([-23.5438, -46.4132], { icon })
-    .addTo(map)
+L.marker([-23.5438, -46.4132]).addTo(map)
     .bindPopup("<b>CRAS Guaianases</b><br>Rua Clarínia, 19");
 
 // CREAS
-L.marker([-23.5445, -46.4148], { icon })
-    .addTo(map)
+L.marker([-23.5445, -46.4148]).addTo(map)
     .bindPopup("<b>CREAS Guaianases</b><br>Rua Nabuco de Abreu, 06");
 
-// Ministério Público (centro)
-L.marker([-23.5505, -46.6333], { icon })
-    .addTo(map)
+// Ministério Público
+L.marker([-23.5505, -46.6333]).addTo(map)
     .bindPopup("<b>Ministério Público SP</b><br>Rua Riachuelo, 115");
 
 // Conselho Tutelar Guaianases
-L.marker([-23.5432, -46.4125], { icon })
-    .addTo(map)
+L.marker([-23.5432, -46.4125]).addTo(map)
     .bindPopup("<b>Conselho Tutelar Guaianases</b><br>Rua Centralina, 254");
 
 // Conselho Tutelar Lajeado
-L.marker([-23.5375, -46.4078], { icon })
-    .addTo(map)
+L.marker([-23.5375, -46.4078]).addTo(map)
     .bindPopup("<b>Conselho Tutelar Lajeado</b><br>Rua General Otelo Franco");
 
-// FUNÇÃO: IR PARA PREFEITURA
+// MARCADOR DA PREFEITURA (igual ao cultura)
+const marcadorPrefeitura = L.marker(prefeitura)
+    .addTo(map)
+    .bindPopup("<b>Prefeitura de Guaianases</b>");
+
+// IR PARA PREFEITURA
 function irParaPrefeitura() {
     map.setView(prefeitura, 16);
-
-    L.marker(prefeitura)
-        .addTo(map)
-        .bindPopup("<b>Prefeitura de Guaianases</b>")
-        .openPopup();
+    marcadorPrefeitura.openPopup();
 }
 
-// FUNÇÃO: MINHA LOCALIZAÇÃO
+// LOCALIZAÇÃO (padronizada também)
 function findMe() {
-    map.locate({ setView: true, maxZoom: 16 });
+    if (!navigator.geolocation) {
+        alert("Geolocalização não suportada");
+        return;
+    }
 
-    map.on('locationfound', function (e) {
-        L.marker(e.latlng)
-            .addTo(map)
+    navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+
+        L.marker([lat, lng]).addTo(map)
             .bindPopup("Você está aqui")
             .openPopup();
-    });
 
-    map.on('locationerror', function () {
-        alert("Não foi possível acessar sua localização");
+        map.setView([lat, lng], 15);
     });
 }

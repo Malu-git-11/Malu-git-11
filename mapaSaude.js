@@ -26,14 +26,14 @@ document.addEventListener("click", () => {
     submenu.classList.remove("active");
 });
 
-// ================= MAPA =================
+//  MAPA 
 const map = L.map('map').setView([-23.5505, -46.403], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap'
 }).addTo(map);
 
-// ===== MARCADORES =====
+//  MARCADORES 
 
 // URGÊNCIA
 L.marker([-23.5522, -46.4066]).addTo(map)
@@ -82,9 +82,9 @@ const marcadorPrefeitura = L.marker(prefeituraCoords)
     .addTo(map)
     .bindPopup("Prefeitura de Guaianases");
 
-// ===== BOTÕES =====
+//  BOTÕES 
 
-// MINHA LOCALIZAÇÃO (CORRIGIDO)
+// MINHA LOCALIZAÇÃO 
 function findMe() {
     if (!navigator.geolocation) {
         alert("Seu navegador não suporta localização");

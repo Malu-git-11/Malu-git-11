@@ -66,14 +66,12 @@ function findMe() {
     });
 }
 
-// ===== PREFEITURA =====
+// PREFEITURA 
 const prefeituraCoords = [-23.5425, -46.4107];
 
 const marcadorPrefeitura = L.marker(prefeituraCoords)
     .addTo(map)
     .bindPopup("Prefeitura de Guaianases");
-
-// ===== BOTÕES =====
 
 // IR PARA PREFEITURA
 function irParaCentro() {
