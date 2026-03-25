@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultura e Esporte - Guaianases</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="saude.css"> <!-- reutilizando -->
+</head>
+
+<body>
+
+  <header>
+    <h1><img src="./assest/logo.png" alt="Logo do site" width="300" height="100"></h1>
+
+    <div class="menu-container">
+
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav class="menu" id="menu">
+        <a href="./perfil.html"><button>Home</button></a>
+
+        <div class="submenu-container">
+          <button id="btnCategorias">Categorias</button>
+
+          <div class="submenu" id="submenuCategorias">
+            <a href="saude.html">Equipamentos de saúde</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="direitos.html">Direitos</a>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <br>
+  <h1>Cultura e Esporte em Guaianases</h1>
+  <hr>
+
+  <!-- CULTURA -->
+  <h3 class="categoria">Cultura</h3>
+  <ul class="lista-saude">
+
+    <li>
+      <h2>Casa de Cultura de Guaianases</h2>
+      <p>R. Castelo do Piauí, s/n</p>
+      <span class="horario">🕐 09:00 às 21:00 (domingo até 17:00)</span>
+    </li>
+
+  </ul>
+
+  <!-- ESPORTE -->
+  <h3 class="categoria">Esporte e Lazer (CDCs)</h3>
+  <ul class="lista-saude">
+
+    <li>
+      <h2>CDC Serra Queimada</h2>
+      <p>Região de Guaianases</p>
+      <span class="horario">🕐 Horário sob consulta</span>
+    </li>
+
+    <li>
+      <h2>CDC Isidoro Mateus</h2>
+      <p>Região de Guaianases</p>
+      <span class="horario">🕐 Horário sob consulta</span>
+    </li>
+
+    <li>
+      <h2>CDC Marcílio Alves Prado</h2>
+      <p>Região de Guaianases</p>
+      <span class="horario destaque">🕐 08:00 às 22:00</span>
+    </li>
+
+  </ul>
+
+  <br>
+
+  <h2>Mapa de Cultura e Esporte</h2>
+
+  <button onclick="findMe()">Minha Localização</button>
+  <button onclick="irParaCentro()">Ponto Referencial</button>
+
+  <div id="map" style="height: 500px;"></div>
+
+  <script src="mapaCultura.js"></script>
+</body>
+
+</html>

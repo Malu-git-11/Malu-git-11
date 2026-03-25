@@ -35,11 +35,6 @@ function login() {
     return;
   }
 
-  // Simulação de login (depois você pode trocar por banco de dados)
-  const usuario = {
-    email: email
-  };
-
   // Salva no navegador
   localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
 
@@ -52,7 +47,7 @@ function cadastrar() {
   window.location.href = "cadastro.html";
 }
 
-// VERIFICA SE ESTÁ LOGADO (usar no perfil.html depois se quiser)
+// VERIFICA SE ESTÁ LOGADO
 function verificarLogin() {
   const usuario = localStorage.getItem("usuarioLogado");
 
@@ -68,7 +63,6 @@ function sair() {
   window.location.href = "index.html";
 }
 
-// ATIVAR BOTÃO SAIR (perfil.html)
 document.addEventListener("DOMContentLoaded", () => {
   const btnSair = document.getElementById("btnSair");
 
@@ -76,3 +70,4 @@ document.addEventListener("DOMContentLoaded", () => {
     btnSair.addEventListener("click", sair);
   }
 });
+

@@ -4,12 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <link rel="stylesheet" href="saude.css">
   <title>Saúde</title>
 </head>
 
 <body>
 
+  <header>
+    <h1><img src="./assest/logo.png" alt="Logo do site" width="300px" height="100px"></h1>
+
+    <div class="menu-container">
+
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <nav class="menu" id="menu">
+        <a href="./perfil.html"><button>Home</button></a>
+        <div class="submenu-container">
+          <button id="btnCategorias">Categorias</button>
+
+          <div class="submenu" id="submenuCategorias">
+            <a href="saude.html">Equipamentos de saúde</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="direitos.html">Direitos</a>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <br>
   <h1>Saúde em Guaianases</h1>
   <hr>
 
@@ -187,6 +218,17 @@
 
   </ul>
 
+  <br>
+
+  <h2>Mapa dos Equipamentos de Saúde</h2>
+
+  <button onclick="findMe()">Minha Localização</button>
+  <button onclick="irParaPrefeitura()">Ponto Referencial</button>
+
+  <div id="map" style="height: 500px;"></div>
+
+  <script src="script.js"></script>
+  <script src="mapaSaude.js"></script>
 </body>
 
 </html>

@@ -1,15 +1,11 @@
-// =====================
 // SERVICE WORKER
-// =====================
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
         .then(() => console.log('Service Worker registrado com sucesso!'))
         .catch(err => console.log('Erro ao registrar Service Worker:', err));
 }
 
-// =====================
 // MAPA INICIAL (Prefeitura)
-// =====================
 const prefeituraCoords = [-23.5429, -46.4143];
 
 let map = L.map('map').setView(prefeituraCoords, 15);
@@ -106,9 +102,7 @@ const iconeDireitos = L.icon({
     iconSize: [32, 32]
 });
 
-// =====================
 // PONTOS NO MAPA
-// =====================
 const pontos = [
     { lat: -23.5423, lng: -46.4088, nome: "Hospital Geral de Guaianases", icon: iconeSaude },
     { lat: -23.5447, lng: -46.4125, nome: "UBS Guaianases II", icon: iconeSaude },
