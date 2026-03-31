@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Configuração do Firebase-->
+      <script type="module" src="app.js" defer></script>
+
+  
 </head>
 
 <body>
@@ -14,30 +19,71 @@
         <h1><img src="./assest/logo.png" alt="Logo do site" width="200px" height="60px"></h1>
     </header>
 
-  <div class="container">
+  <div class="container" id="entrar" style="display: block;">
 
     <h2>Login</h2>
 
+  <form>
     <div class="form-group">
       <label>E-mail</label>
-      <input type="email" id="email" placeholder="Digite seu e-mail">
+      <input type="email" id="emailLogin" placeholder="Digite seu e-mail" required>
     </div>
 
     <div class="form-group">
       <label>Senha</label>
-      <input type="password" id="senha" placeholder="Digite sua senha">
+      <input type="password" id="senhaLogin" placeholder="Digite sua senha" required>
     </div>
 
-    <button class="btn btn-outline" onclick="login()">Entrar</button>
-      
+    <button type="button" class="btn btn-outline" id="btnLogin">Entrar</button>
+     </form>
+ 
     <p class="link">
       <br>Não tem conta?
-        <a href="cadastro.html">Cadastre-se</a>
+        <button class="btnlink" id="linkCad">Cadastre-se</a>
     </p> 
 
   </div>
 
-  <script src="script.js"></script>
+<div class="container" id="cadastrar"  style="display: none;">
+
+        <h2>Cadastro</h2>
+
+        <form>
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" id="emailCadastro" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="form-group">
+            <label>Senha</label>
+            <input type="password" id="senhaCadastro" placeholder="Crie uma senha" required>
+        </div>
+
+        <button type="button" id="btnCadastrar" class="btn">Criar Conta</button>
+      </form>
+
+        <p class="link">
+            <br>Já tem conta? <button class="btnlink" id="linklogin">Faça login</button>
+        </p>
+
+  </div>
+
 </body>
 
+<script>
+  const cadastrarBtn = document.getElementById('linkCad');
+const entrarBtn = document.getElementById('linklogin');
+const entrarForm = document.getElementById('entrar');
+const cadastrarForm = document.getElementById('cadastrar');
+
+cadastrarBtn.addEventListener('click', () => {
+  entrarForm.style.display = "none";  
+  cadastrarForm.style.display = "block"; 
+});
+
+entrarBtn.addEventListener('click', () => {
+  cadastrarForm.style.display = "none";   
+  entrarForm.style.display = "block";   
+});
+</script>
 </html>

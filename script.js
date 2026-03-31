@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // LOGIN
 function login() {
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
+  const email = document.getElementById("emailLogin").value;
+  const senha = document.getElementById("senhaLogin").value;
 
   if (email === "" || senha === "") {
     alert("Preencha todos os campos!");

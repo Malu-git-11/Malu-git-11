@@ -76,17 +76,30 @@ input:focus {
 }
 
 p.link {
+    cursor:default;
  color: #0a3d62;   
 }
 
 
-a{
-    text-decoration: none;
-    color: red;
+.btnlink{
+    border-radius: 8px;
+    border-style: none;
+    background-color: #126b33;
+    width: 30%;
+    height: 70%;
+    color: white;
 }
 
-a:hover{
-    color: #126b33;
+.link{
+    height: 50px;
+}
+
+.btnlink:hover{
+    cursor: pointer;
+    background-color: #1e90ff;
+    width: 30%;
+    height: 70%;
+    color: white;
 }
 
 .btn {
