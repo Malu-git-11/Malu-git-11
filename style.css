@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f4f4f4;
+    background: linear-gradient(135deg, #0a3d62, #1e90ff);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +14,7 @@ body {
 }
 
 .container {
+        position:relative;
     background: white;
     padding: 30px;
     width: 350px;
@@ -21,12 +22,32 @@ body {
     box-shadow: 0 4px 18px rgba(0,0,0,0.1);
 }
 
+header {
+    position:absolute;
+    top: 0%;
+    background: #0a3d62;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+h1{
+    position: relative;
+    margin-left: 10px;
+    top: 25%;
+}
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #1e90ff;
 }
 
+
+/* formuario */
 .form-group {
     margin-bottom: 15px;
 }
@@ -40,22 +61,40 @@ input {
     width: 100%;
     padding: 10px;
     margin-top: 6px;
-    border: 1px solid #ccc;
+    border: 1px solid #0a3d62;
     border-radius: 8px;
     font-size: 15px;
 }
 
+input::placeholder{
+    color:  #1e90ff;
+}
+
 input:focus {
-    border-color: #4a73ff;
+    border-color: #1e90ff;
     outline: none;
+}
+
+p.link {
+ color: #0a3d62;   
+}
+
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+a:hover{
+    color: #126b33;
 }
 
 .btn {
     width: 100%;
     padding: 12px;
     margin-top: 10px;
-    background: #4a73ff;
-    border: none;
+    border: 1px solid #1e90ff;
+    background: #1e90ff;
     color: white;
     font-size: 16px;
     border-radius: 8px;
@@ -63,16 +102,19 @@ input:focus {
 }
 
 .btn:hover {
-    background: #3f63e0;
+    background: #0a3d62;
+        border: 1px solid #0a3d62;
+
 }
 
 .btn-outline {
     background: white;
-    border: 1px solid #4a73ff;
-    color: #4a73ff;
+    border: 1px solid #1e90ff;
+    color: #1e90ff;
 }
 
 .btn-outline:hover {
-    background: #4a73ff;
+    border: 1px solid #0a3d62;
+    background: #0a3d62;
     color: white;
 }
