@@ -4,86 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+  <title>GML Guaianases</title>
 
-    <!--Configuração do Firebase-->
-      <script type="module" src="app.js" defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <link rel="stylesheet" href="./src/CSS/perfil.css">
+  <script src="./src/js/mapa.js" defer></script>
+
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
+  <header>
+    <h1><img src="./assest/logo.png" alt="Logo do site" width="200px" height="60px"></h1>
 
-     <header>
-        <h1><img src="./assest/logo.png" alt="Logo do site" width="200px" height="60px"></h1>
-    </header>
+    <div class="menu-container">
 
-  <div class="container" id="entrar" style="display: block;">
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
 
-    <h2>Login</h2>
+      <nav class="menu" id="menu">
+        <a href="#"><button>Home</button></a>
+        <div class="submenu-container">
+          <button id="btnCategorias">Categorias</button>
 
-  <form>
-    <div class="form-group">
-      <label>E-mail</label>
-      <input type="email" id="emailLogin" placeholder="Digite seu e-mail" required>
+          <div class="submenu" id="submenuCategorias">
+            <a href="saude.html">Equipamentos de saúde</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="direitos.html">Direitos</a>
+          </div>
+        </div>
+      </nav>
+
     </div>
 
-    <div class="form-group">
-      <label>Senha</label>
-      <input type="password" id="senhaLogin" placeholder="Digite sua senha" required>
-    </div>
+  </header>
 
-    <button type="button" class="btn btn-outline" id="btnLogin">Entrar</button>
-     </form>
- 
-    <p class="link">
-      <br>Não tem conta?
-        <button class="btnlink" id="linkCad">Cadastre-se</a>
-    </p> 
+  <button onclick="findMe()">Minha Localização</button>
+  <button onclick="irParaPrefeitura()">Ponto Referencial</button>
+  <div id="map"></div>
 
-  </div>
+  <p id="info"></p>
+  
+  <footer>
+    <p>© 2025 Feito por Maria Luiza Mendes, Maria Luisa de Paula e Giovanna Valero</p>
+  </footer>
 
-<div class="container" id="cadastrar"  style="display: none;">
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
 
-        <h2>Cadastro</h2>
+    hamburger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
 
-        <form>
-        <div class="form-group">
-            <label>E-mail</label>
-            <input type="email" id="emailCadastro" placeholder="Digite seu e-mail" required>
-        </div>
+    const links = menu.querySelectorAll("a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+    });
+    //SUBMENU CATEGORIAS
+    const btnCategorias = document.getElementById("btnCategorias");
+    const submenu = document.getElementById("submenuCategorias");
 
-        <div class="form-group">
-            <label>Senha</label>
-            <input type="password" id="senhaCadastro" placeholder="Crie uma senha" required>
-        </div>
+    btnCategorias.addEventListener("click", (e) => {
+      e.stopPropagation(); // evita fechar imediatamente
+      submenu.classList.toggle("active");
+    });
 
-        <button type="button" id="btnCadastrar" class="btn">Criar Conta</button>
-      </form>
-
-        <p class="link">
-            <br>Já tem conta? <button class="btnlink" id="linklogin">Faça login</button>
-        </p>
-
-  </div>
+    // Fecha se clicar fora
+    document.addEventListener("click", () => {
+      submenu.classList.remove("active");
+    });
+  </script>
 
 </body>
 
-<script>
-  const cadastrarBtn = document.getElementById('linkCad');
-const entrarBtn = document.getElementById('linklogin');
-const entrarForm = document.getElementById('entrar');
-const cadastrarForm = document.getElementById('cadastrar');
-
-cadastrarBtn.addEventListener('click', () => {
-  entrarForm.style.display = "none";  
-  cadastrarForm.style.display = "block"; 
-});
-
-entrarBtn.addEventListener('click', () => {
-  cadastrarForm.style.display = "none";   
-  entrarForm.style.display = "block";   
-});
-</script>
 </html>
