@@ -93,22 +93,22 @@ function findMe() {
     }
 
     navigator.geolocation.getCurrentPosition(
-        function (position) {
-            const lat = position.coords.latitude;
-            const lng = position.coords.longitude;
+        (position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
 
-            L.marker([lat, lng]).addTo(map)
-                .bindPopup("Você está aqui")
-                .openPopup();
+        L.marker([lat, lng]).addTo(map)
+            .bindPopup("Você está aqui")
+            .openPopup();
 
-            map.setView([lat, lng], 15);
-        },
-        function (error) {
-            alert("Não foi possível obter sua localização");
-            console.log(error);
-            irParaPrefeitura();
-        }
-    );
+        map.setView([lat, lng], 15);
+    },
+    function (error) {
+        alert("Não foi possível obter sua localização");
+        console.log(error);
+        irParaPrefeitura();
+    }
+  );
 }
 
 // IR PARA PREFEITURA

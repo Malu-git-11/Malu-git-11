@@ -13,10 +13,8 @@ body {
 
 /* MAPA */
 #map {
-    width: 80%;
-    max-width: 900px;
-    height: 400px;
-    margin: 20px auto;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
@@ -227,3 +225,21 @@ nav button:hover {
         text-align: left;
     }
 }
+
+
+
+/* BOTÕES LOCALIZAÇÃO*/
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #0a3d62;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #bfd9ec;
+  }
+  

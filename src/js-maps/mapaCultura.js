@@ -54,7 +54,8 @@ function findMe() {
         return;
     }
 
-    navigator.geolocation.getCurrentPosition((position) => {
+    navigator.geolocation.getCurrentPosition(
+        (position) => {
         const lat = position.coords.latitude;
         const lng = position.coords.longitude;
 
@@ -63,7 +64,13 @@ function findMe() {
             .openPopup();
 
         map.setView([lat, lng], 15);
-    });
+    },
+    function (error) {
+        alert("Não foi possível obter sua localização");
+        console.log(error);
+        irParaPrefeitura();
+    }
+  );
 }
 
 // PREFEITURA 
