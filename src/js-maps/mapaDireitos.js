@@ -66,7 +66,7 @@ L.marker([-23.5375, -46.4078]).addTo(map)
 // MARCADOR DA PREFEITURA (igual ao cultura)
 const marcadorPrefeitura = L.marker(prefeitura)
     .addTo(map)
-    .bindPopup("<b>Prefeitura de Guaianases</b>");
+    .bindPopup("<b>Subprefeitura de Guaianases</b>");
 
 // IR PARA PREFEITURA
 function irParaPrefeitura() {

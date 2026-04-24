@@ -21,7 +21,11 @@
 <body>
   <header>
     <h1><img src="./assest/logo.png" alt="Logo do site" width="200px" height="60px"></h1>
-
+            
+          <form action="/buscar" method="get">
+              <input type="search" name="q" placeholder="Pesquisar...">
+              <button type="submit">Buscar</button>
+          </form>
     <div class="menu-container">
 
       <div class="hamburger" id="hamburger">
@@ -31,10 +35,10 @@
       </div>
 
       <nav class="menu" id="menu">
-        <button onclick="findMe()">Minha Localização</button>
-  <button onclick="irParaPrefeitura()">Ponto Referencial</button>
 
-        <a href="#"><button>Home</button></a>
+        <button onclick="findMe()">Minha Localização</button>
+        <button onclick="irParaPrefeitura()">Ponto Referencial</button>
+
         <div class="submenu-container">
           <button id="btnCategorias">Categorias</button>
 

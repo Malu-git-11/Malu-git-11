@@ -18,7 +18,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Marcador fixo da Prefeitura
 const marcadorPrefeitura = L.marker(prefeituraCoords)
     .addTo(map)
-    .bindPopup("Prefeitura de Guaianases")
+    .bindPopup("Subprefeitura de Guaianases")
     .openPopup();
 
 // BOTÃO: MINHA LOCALIZAÇÃO
