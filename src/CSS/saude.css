@@ -1,245 +1,243 @@
+/* Importação de fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #00a8cc;
+  --urgent-color: #d9534f;
+  --bg-color: #f4f7f9;
+  --text-color: #ffffff;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(135deg, #0a3d62, #1e90ff);
-    color: #fff;
-    padding: 20px;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
-/* MAPA */
-#map {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* LINHA */
-hr {
-    margin-bottom: 20px;
-    border: none;
-    height: 2px;
-    background: #22c55e;
-}
-
-.lista-saude {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-}
-
-/* HEADER */
+/* --- HEADER --- */
 header {
-    background: #0a3d62;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  background-color: rgba(189, 179, 179, 0.587);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header h1 {
-    margin-left: 10px;
+header form {
+  display: flex;
+  gap: 5px;
 }
 
-/* MENU */
+header input[type="search"] {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+}
+
+header button[type="submit"] {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* --- NAVEGAÇÃO --- */
 .menu-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .menu {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 15px;
 }
 
-.menu a {
-    text-decoration: none;
+.menu button, .menu a button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 10px;
+  transition: 0.3s;
 }
 
-nav button {
-    background-color: #0a3d62;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-nav button:hover {
-    background-color: #bfd9ec;
-}
-
-/* SUBMENU */
 .submenu-container {
-    position: relative;
+  position: relative;
 }
 
 .submenu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 45px;
-    left: 0;
-    max-width: 90vw;
-    /* impede passar da tela */
-    background: white;
-    border-radius: 8px;
-    padding: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 2000;
+  display: none;
+  position: absolute;
+  background: rgba(11, 10, 10, 0.587);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  min-width: 200px;
+  top: 100%;
 }
 
 .submenu a {
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 1px solid #eee;
 }
 
 .submenu a:hover {
-    background: #f0f0f0;
+  background-color: #f0f7ff;
 }
 
-.submenu.active {
-    display: flex;
+.submenu-container:hover .submenu {
+  display: block;
 }
 
-/* HAMBURGER */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+/* --- CONTEÚDO PRINCIPAL --- */
+h1 {
+  text-align: center;
+  margin: 40px 0 10px;
+  color: var(--primary-color);
 }
 
-.hamburger .bar {
-    height: 4px;
-    width: 25px;
-    background-color: white;
-    margin: 3px 0;
-    border-radius: 5px;
+hr {
+  width: 50px;
+  height: 4px;
+  background: var(--secondary-color);
+  border: none;
+  margin: 0 auto 40px;
 }
 
-/* DEIXAR TODOS OS CARDS DO MESMO TAMANHO */
+.categoria {
+  padding: 10px 5%;
+  background: var(--primary-color);
+  color: white;
+  margin-top: 30px;
+  border-radius: 0 50px 50px 0;
+  display: inline-block;
+  min-width: 300px;
+  font-weight: 600;
+}
+
+/* --- LISTA DE EQUIPAMENTOS --- */
+.lista-saude {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 5%;
+  list-style: none;
+}
+
 .lista-saude li {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 12px;
-    transition: 0.2s;
-    border-left: 5px solid #22c55e;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100px;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--secondary-color);
+  transition: transform 0.2s;
 }
 
-/* HOVER */
 .lista-saude li:hover {
-    transform: scale(1.02);
+  transform: translateY(-5px);
 }
 
 .lista-saude h2 {
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #000000;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #222;
 }
 
 .lista-saude p {
-    font-size: 14px;
-    line-height: 1.4;
-    color: #2d2e31;
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 15px;
 }
 
-.horario {
-    display: block;
-    margin-top: 10px;
-    font-size: 13px;
+.lista-saude span{
     color: #000000;
 }
 
-
-
-.categoria {
-    margin: 25px 0 10px;
-    color: #22c55e;
-    font-size: 18px;
-    border-left: 5px solid #22c55e;
-    padding-left: 10px;
+.horario {
+  font-size: 0.85rem;
+  background: #eee;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: bold;
 }
 
-/* HORÁRIO */
-.horario {
-    display: block;
-    margin-top: 10px;
-    font-size: 13px;
+.destaque {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+/* Estilo específico para Urgência (24h) */
+.categoria:first-of-type + .lista-saude li {
+    border-left-color: var(--urgent-color);
+}
+
+/* --- MAPA E BOTÕES --- */
+#map {
+  margin: 20px 5%;
+  border-radius: 15px;
+  border: 3px solid white;
+  box-shadow: var(--shadow);
+}
+
+button[onclick] {
+  margin-left: 5%;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--secondary-color);
+  color: rgb(34, 33, 33);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[onclick]:hover {
+  background: var(--primary-color);
+}
+
+h2 {
+    margin-left: 5%;
+    margin-top: 20px;
     color: #000000;
 }
 
-/* DESTAQUE (24H ou DIFERENTE) */
-.horario.destaque {
-    color: #22c55e;
-    font-weight: bold;
-}
-
-/* RESPONSIVIDADE */
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    /* mostra o botão hamburguer */
-    .hamburger {
-        display: flex;
-    }
-
-    /* esconde o menu padrão */
-    .menu {
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        background: #0a3d62;
-        flex-direction: column;
-        width: 200px;
-        padding: 10px;
-        border-radius: 10px;
-        display: none;
-        z-index: 3000;
-    }
-
-    /* quando ativado */
-    .menu.active {
-        display: flex;
-    }
-
-    nav button {
-        width: 100%;
-        text-align: left;
-    }
+  .categoria {
+    width: 90%;
+    border-radius: 0 25px 25px 0;
+  }
 }
-
-
-
-/* BOTÕES LOCALIZAÇÃO*/
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background: #0a3d62;
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #bfd9ec;
-  }
-  

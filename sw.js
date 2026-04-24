@@ -4,7 +4,7 @@ const BASE_PATH = '/Malu-git-11'; // <- caminho do repositório
 const FILES_TO_CACHE = [
   `${BASE_PATH}/index.html`,
   `${BASE_PATH}/style.css`,
-  `${BASE_PATH}/perfil.css`,
+  `${BASE_PATH}/index.css`,
   `${BASE_PATH}/app.js`,
   `${BASE_PATH}/manifest.json`
 ];
