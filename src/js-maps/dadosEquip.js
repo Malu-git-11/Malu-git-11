@@ -5,7 +5,7 @@ const Equipamentos = [
         nome: "Casa de cultura de Guaianases",
         endereco: "R. Castelo do Piauí, s/n",
         horario: "🕐 09:00 às 21:00 (domingo até 17:00)",
-        telefone: "",
+        telefone: "📞 (11) 2016-1961",
         descricao: "",
         coordernadas: 123412313
     },
@@ -13,8 +13,8 @@ const Equipamentos = [
         categoria:"Esporte e Lazer (CDCs)",
         nome: "CDC Serra Queimada",
         endereco: "R. Serra da Queimada, 857 - Parque Guaianazes",
-        horario: "🕐 Horário sob consulta",
-        telefone: "",
+        horario: "🕐 Atendimento de 24 horas",
+        telefone: "📞 (11) 96712-0524",
         descricao: "",
         coordernadas: ""
     },
@@ -23,7 +23,7 @@ const Equipamentos = [
         nome: "CDC Isidoro Mateus",
         endereco: "Vila Marilena, São Paulo",
         horario: "🕐 Atendimento de 24 horas",
-        telefone: "",
+        telefone: "📞 (11) 95889-7543",
         descricao: "",
         coordernadas: ""
     }, 
@@ -32,7 +32,7 @@ const Equipamentos = [
         nome: "CDC Marcílio Alves Prado",
         endereco: "Jardim Gianetti, São Paulo - SP, 08430-350",
         horario: "🕐 08:00 às 22:00",
-        telefone: "",
+        telefone: "📞 (11) 6513-8831",
         descricao: "",
         coordernadas: ""
     },
@@ -97,7 +97,7 @@ const Equipamentos = [
         nome: "Hospital Geral de Guaianases",
         endereco: "Av. Miguel Achiole da Fonseca, 135",
         horario: "🕐 Atendimento de 24 horas",
-        telefone: "📞",
+        telefone: "📞 (11) 2551-3300",
         descricao: "",
         coordernadas: ""
     }, 
@@ -106,7 +106,7 @@ const Equipamentos = [
         nome: "UPA Júlio Tupy",
         endereco: "R. Serra da Queimada, 800",
         horario: "🕐 Atendimento de 24 horas",
-        telefone: "📞",
+        telefone: "📞 (11) 2511-6665",
         descricao: "",
         coordernadas: ""
     },
@@ -115,7 +115,7 @@ const Equipamentos = [
         nome: "AMA Presidente Juscelino Kubitschek",
         endereco: "Av. Utaro Kanai, 286",
         horario: "🕐 Atendimento de 24 horas",
-        telefone: "📞",
+        telefone: "📞 (11) 3808-7210/ 2555-4474",
         descricao: "",
         coordernadas: ""
     },
