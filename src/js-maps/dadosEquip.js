@@ -7,13 +7,13 @@ const Equipamentos = [
         horario: "🕐 09:00 às 21:00 (domingo até 17:00)",
         telefone: "📞 (11) 2016-1961",
         descricao: "",
-        coordernadas: 123412313
+        coordernadas: ""
     },
     {
         categoria:"Esporte e Lazer (CDCs)",
         nome: "CDC Serra Queimada",
         endereco: "R. Serra da Queimada, 857 - Parque Guaianazes",
-        horario: "🕐 Atendimento de 24 horas",
+        horario: "🕐 24 horas",
         telefone: "📞 (11) 96712-0524",
         descricao: "",
         coordernadas: ""
@@ -22,7 +22,7 @@ const Equipamentos = [
         categoria:"Esporte e Lazer (CDCs)",
         nome: "CDC Isidoro Mateus",
         endereco: "Vila Marilena, São Paulo",
-        horario: "🕐 Atendimento de 24 horas",
+        horario: "🕐 24 horas",
         telefone: "📞 (11) 95889-7543",
         descricao: "",
         coordernadas: ""
@@ -49,7 +49,7 @@ const Equipamentos = [
         categoria:"Assistência Social",
         nome: "CRAS Guaianases",
         endereco: "Rua Clarínia, 19",
-        horario: "🕐 Atendimento de 24 horas",
+        horario: "🕐 24 horas",
         telefone: "📞 (11) 2363-9593 / 2363-9594",
         descricao: "",
         coordernadas: ""
@@ -68,7 +68,7 @@ const Equipamentos = [
         categoria:"Proteção dos Direitos",
         nome: "Ministério Público de São Paulo",
         endereco: "Rua Riachuelo, 115 - 1º andar",
-        horario: "🕐 Atendimento de 24 horas",
+        horario: "🕐 24 horas",
         telefone: "📞 (11) 3119-9090 (Saúde Pública)",
         descricao: "",
         coordernadas: ""
@@ -96,7 +96,7 @@ const Equipamentos = [
         categoria:"Urgência e Emergência",
         nome: "Hospital Geral de Guaianases",
         endereco: "Av. Miguel Achiole da Fonseca, 135",
-        horario: "🕐 Atendimento de 24 horas",
+        horario: "🕐 24 horas",
         telefone: "📞 (11) 2551-3300",
         descricao: "",
         coordernadas: ""
@@ -105,7 +105,7 @@ const Equipamentos = [
         categoria:"Urgência e Emergência",
         nome: "UPA Júlio Tupy",
         endereco: "R. Serra da Queimada, 800",
-        horario: "🕐 Atendimento de 24 horas",
+        horario: "🕐 24 horas",
         telefone: "📞 (11) 2511-6665",
         descricao: "",
         coordernadas: ""
@@ -114,9 +114,35 @@ const Equipamentos = [
         categoria:"Urgência e Emergência",
         nome: "AMA Presidente Juscelino Kubitschek",
         endereco: "Av. Utaro Kanai, 286",
-        horario: "🕐 Atendimento de 24 horas",
+        horario: "🕐 24 horas",
         telefone: "📞 (11) 3808-7210/ 2555-4474",
         descricao: "",
         coordernadas: ""
     },
 ]
+
+const listasaude = document.querySelector(".lista-saude");
+const searchInput = document.getElementById("searchInput");
+
+
+ const displayData = Equipamentos => { 
+    listasaude.innerHTML = "";
+    Equipamentos.forEach(e => {
+        listasaude.innerHTML += `
+        <li>
+          <h2>${e.nome}</h2>
+          <p>${e.endereco}</p>
+          <span class="horario">${e.horario}</span>
+          <span class="horario">${e.telefone}</span>
+        </li>`;
+    });
+}
+
+searchInput.addEventListener("keyup", (e) => {
+    const search = Equipamentos.filter(i => 
+        i.nome.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    displayData(search);
+});
+
+window.addEventListener("load", () => displayData(Equipamentos));
