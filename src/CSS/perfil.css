@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:src/CSS/perfil.css
 /* RESET */
 * {
   margin: 0;
@@ -180,4 +181,237 @@ footer {
     width: 100%;
     text-align: left;
   }
+=======
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+  background: #0f172a;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* MAPA FULLSCREEN */
+#map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* HEADER FLUTUANTE */
+header {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  background: rgba(0, 0, 0, 0.315);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+header form {
+  display: flex;
+  gap: 5px;
+}
+
+header input[type="search"] {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+}
+
+header button[type="submit"] {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header button:hover[type="submit"] {
+  background-color:  #3b82f6;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+/* LOGO */
+header h1 {
+  font-size: 18px;
+}
+
+/* MENU */
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 8px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+/* BOTÕES NAV */
+nav button {
+  background: rgba(189, 179, 179, 0.587);
+  color: black;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #3b82f6;
+}
+
+/* SUBMENU */
+.submenu-container {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: rgba(11, 10, 10, 0.587);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.submenu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.submenu a:hover {
+  background: #334155;
+}
+
+.submenu.active {
+  display: flex;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 22px;
+  background-color: white;
+  margin: 3px 0;
+  border-radius: 5px;
+}
+
+/* BOTÕES FLUTUANTES (tipo Google Maps) */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.floating-buttons button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.floating-buttons button:hover {
+  background: #3b82f6;
+}
+
+/* INFO BOX */
+#info {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(30, 41, 59, 0.9);
+  padding: 12px;
+  border-radius: 10px;
+  z-index: 1000;
+  max-width: 250px;
+  font-size: 14px;
+}
+
+/* FOOTER (OPCIONAL - pode remover) */
+footer {
+  display: none;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #1e293b;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  nav button {
+    width: 100%;
+    text-align: left;
+  }
+>>>>>>> Stashed changes:src/CSS/index.css
 }
