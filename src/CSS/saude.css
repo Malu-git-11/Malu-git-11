@@ -80,34 +80,37 @@ header button[type="submit"] {
   transition: 0.3s;
 }
 
+
+/* SUBMENU */
 .submenu-container {
   position: relative;
 }
 
 .submenu {
   display: none;
+  flex-direction: column;
   position: absolute;
+  top: 45px;
+  left: 0;
   background: rgba(11, 10, 10, 0.587);
-  box-shadow: var(--shadow);
-  border-radius: 8px;
-  min-width: 200px;
-  top: 100%;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
 .submenu a {
-  display: block;
-  padding: 12px;
   text-decoration: none;
-  color: var(--text-color);
-  border-bottom: 1px solid #eee;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
 }
 
 .submenu a:hover {
-  background-color: #f0f7ff;
+  background: #334155;
 }
 
-.submenu-container:hover .submenu {
-  display: block;
+.submenu.active {
+  display: flex;
 }
 
 /* --- CONTEÚDO PRINCIPAL --- */
