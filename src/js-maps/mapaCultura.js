@@ -56,21 +56,21 @@ function findMe() {
 
     navigator.geolocation.getCurrentPosition(
         (position) => {
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
 
-        L.marker([lat, lng]).addTo(map)
-            .bindPopup("Você está aqui")
-            .openPopup();
+            L.marker([lat, lng]).addTo(map)
+                .bindPopup("Você está aqui")
+                .openPopup();
 
-        map.setView([lat, lng], 15);
-    },
-    function (error) {
-        alert("Não foi possível obter sua localização");
-        console.log(error);
-        irParaPrefeitura();
-    }
-  );
+            map.setView([lat, lng], 15);
+        },
+        function (error) {
+            alert("Não foi possível obter sua localização");
+            console.log(error);
+            irParaPrefeitura();
+        }
+    );
 }
 
 // PREFEITURA 
@@ -85,3 +85,29 @@ function irParaCentro() {
     map.setView(prefeituraCoords, 16);
     marcadorPrefeitura.openPopup();
 }
+
+// BARRA DE PESQUISA
+const campoPesquisa = document.getElementById("pesquisa");
+
+campoPesquisa.addEventListener("input", () => {
+
+    const texto = campoPesquisa.value.toLowerCase();
+
+    // pega todos os itens da lista
+    const itens = document.querySelectorAll(".lista-saude li");
+
+    itens.forEach(item => {
+
+        const titulo = item.querySelector("h2").textContent.toLowerCase();
+        const endereco = item.querySelector("p").textContent.toLowerCase();
+
+        // verifica se encontrou o texto
+        if (titulo.includes(texto) || endereco.includes(texto)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+
+    });
+
+});

@@ -92,3 +92,29 @@ function findMe() {
         map.setView([lat, lng], 15);
     });
 }
+
+// BARRA DE PESQUISA
+const campoPesquisa = document.getElementById("pesquisa");
+
+campoPesquisa.addEventListener("input", () => {
+
+    const texto = campoPesquisa.value.toLowerCase();
+
+    // pega todos os itens da lista
+    const itens = document.querySelectorAll(".lista-saude li");
+
+    itens.forEach(item => {
+
+        const titulo = item.querySelector("h2").textContent.toLowerCase();
+        const endereco = item.querySelector("p").textContent.toLowerCase();
+
+        // verifica se encontrou o texto
+        if (titulo.includes(texto) || endereco.includes(texto)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+
+    });
+
+});
