@@ -142,3 +142,15 @@ campoPesquisa.addEventListener("input", () => {
     });
 
 });
+
+//ABRIR DESCRICAO DOS EQUIPAMENTOS
+const equipamentos = document.querySelectorAll(".lista-saude li");
+
+equipamentos.forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        item.classList.toggle("ativo");
+
+    })
+})
