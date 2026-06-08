@@ -127,16 +127,24 @@ campoPesquisa.addEventListener("input", () => {
     // pega todos os itens da lista
     const itens = document.querySelectorAll(".lista-saude li");
 
+    if (texto.length > 0) {
+        document.querySelector(".lista-saude").scrollIntoView({ behavior: "smooth" }); // 👈
+    }
+    
     itens.forEach(item => {
 
         const titulo = item.querySelector("h2").textContent.toLowerCase();
         const endereco = item.querySelector("p").textContent.toLowerCase();
+        const descricao = item.querySelector(".descricao").textContent.toLowerCase();
+
 
         // verifica se encontrou o texto
-        if (titulo.includes(texto) || endereco.includes(texto)) {
+        if (titulo.includes(texto) || endereco.includes(texto) || descricao.includes(texto)) {
             item.style.display = "block";
+            if (texto.length > 0) item.classList.add("ativo");    // 👈 abre
         } else {
             item.style.display = "none";
+            item.classList.remove("ativo");
         }
 
     });
