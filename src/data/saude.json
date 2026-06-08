@@ -1,0 +1,226 @@
+{
+  "categorias": [
+    {
+      "id": "urgencia",
+      "titulo": "Urgência e Emergência",
+      "equipamentos": [
+        {
+          "nome": "Hospital Geral de Guaianases",
+          "endereco": "Av. Miguel Achiole da Fonseca, 135",
+          "horario": "24 horas",
+          "destaque": true,
+          "descricao": "Hospital público que atende casos mais graves e internações. Serviços: pronto atendimento, cirurgias, exames, internação, atendimento de urgência e emergência.",
+          "coords": [-23.5522, -46.4066]
+        },
+        {
+          "nome": "UPA Júlio Tupy",
+          "endereco": "R. Serra da Queimada, 800",
+          "horario": "24 horas",
+          "destaque": true,
+          "descricao": "Unidade de pronto atendimento para urgências e emergências. Serviços: atendimento rápido, primeiros socorros, estabilização de pacientes.",
+          "coords": [-23.5534, -46.4012]
+        },
+        {
+          "nome": "AMA Presidente Juscelino Kubitschek",
+          "endereco": "Av. Utaro Kanai, 286",
+          "horario": "24 horas",
+          "destaque": true,
+          "descricao": "Atendimento médico rápido para casos de menor gravidade. Serviços: consultas imediatas, atendimento sem agendamento.",
+          "coords": [-23.5511, -46.3986]
+        }
+      ]
+    },
+    {
+      "id": "ubs",
+      "titulo": "Unidades Básicas de Saúde (UBS)",
+      "equipamentos": [
+        {
+          "nome": "UBS Guaianases II",
+          "endereco": "R. Comandante Carlos Ruhl, 189",
+          "horario": "07:00 às 20:00",
+          "destaque": false,
+          "descricao": "Unidade básica de saúde voltada ao atendimento da população local. Serviços: consultas médicas, vacinação, pré-natal, acompanhamento de doenças, curativos.",
+          "coords": [-23.5472, -46.4053]
+        },
+        {
+          "nome": "UBS Guaianases",
+          "endereco": "R. Professor Cosme Deodato Tadeu, 90",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Atendimento primário de saúde para prevenção e cuidados básicos. Serviços: consultas, vacinação, exames simples, acompanhamento de pacientes.",
+          "coords": [-23.5486, -46.4021]
+        },
+        {
+          "nome": "UBS Jardim Aurora",
+          "endereco": "Av. Claudio da Costa, 54",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Unidade focada em cuidados básicos e prevenção. Serviços: atendimento médico, vacinação, pré-natal, acompanhamento familiar.",
+          "coords": [-23.5602, -46.4103]
+        },
+        {
+          "nome": "UBS Jardim Bandeirantes",
+          "endereco": "R. Pacheco Aranha, 4",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Atende a comunidade com serviços básicos de saúde. Serviços: consultas, vacinação, controle de doenças, orientações de saúde.",
+          "coords": [-23.5551, -46.4202]
+        },
+        {
+          "nome": "UBS Jardim Etelvina",
+          "endereco": "R. Manuel Teodoro Xavier, 138",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Atendimento de saúde preventiva e acompanhamento contínuo. Serviços: consultas, vacinação, exames básicos, acompanhamento de pacientes.",
+          "coords": [-23.5490, -46.4170]
+        },
+        {
+          "nome": "UBS Jardim Fanganiello",
+          "endereco": "R. Francisco Nunes Cubas, 60",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Unidade de atenção básica à saúde da população local. Serviços: consultas, vacinação, atendimento infantil e adulto.",
+          "coords": [-23.5455, -46.4090]
+        },
+        {
+          "nome": "UBS Jardim Robru",
+          "endereco": "Av. Nordestina, 5593",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Atende moradores com foco na saúde preventiva. Serviços: consultas médicas, vacinação, acompanhamento de doenças.",
+          "coords": [-23.5700, -46.4300]
+        },
+        {
+          "nome": "UBS Jardim Soares",
+          "endereco": "R. Feliciano de Mendonça, 496",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Unidade voltada ao cuidado básico da saúde. Serviços: consultas, vacinação, pré-natal, acompanhamento de pacientes.",
+          "coords": [-23.5570, -46.4150]
+        },
+        {
+          "nome": "UBS Prefeito Celso Augusto Daniel",
+          "endereco": "R. Jorge Maraccini Ponfilio, 210",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Atendimento primário com foco na prevenção. Serviços: consultas, vacinação, programas de saúde pública.",
+          "coords": [-23.5530, -46.4120]
+        },
+        {
+          "nome": "UBS Primeiro de Outubro",
+          "endereco": "Travessa Açucena do Brejo, 16 B",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Unidade básica de saúde da região. Serviços: consultas, vacinação, exames simples, orientações.",
+          "coords": [-23.5460, -46.4180]
+        },
+        {
+          "nome": "UBS Santa Luzia",
+          "endereco": "R. Conjunto da Paz, 39",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Atendimento básico e acompanhamento da saúde da comunidade. Serviços: consultas, vacinação, pré-natal, controle de doenças.",
+          "coords": [-23.5515, -46.4220]
+        },
+        {
+          "nome": "UBS Vila Chabilândia",
+          "endereco": "Estrada do Lageado Velho, 392",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Unidade de saúde para cuidados essenciais. Serviços: consultas, vacinação, acompanhamento de pacientes.",
+          "coords": [-23.5620, -46.4350]
+        },
+        {
+          "nome": "UBS Vila Cosmopolita",
+          "endereco": "R. Aldeia Maria, 258",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Atendimento básico de saúde para a população local. Serviços: consultas, vacinação, prevenção de doenças.",
+          "coords": [-23.5440, -46.3980]
+        }
+      ]
+    },
+    {
+      "id": "especialidades",
+      "titulo": "Especialidades e Apoio",
+      "equipamentos": [
+        {
+          "nome": "AMA Especialidades São Carlos",
+          "endereco": "R. Macabu, 35",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Unidade voltada para consultas com especialistas. Serviços: consultas especializadas, exames e encaminhamentos.",
+          "coords": [-23.5540, -46.4095]
+        },
+        {
+          "nome": "CEO II Guaianases",
+          "endereco": "R. Macabu, 35",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Centro especializado em saúde bucal. Serviços: tratamentos dentários mais complexos.",
+          "coords": [-23.5540, -46.4095]
+        },
+        {
+          "nome": "CER II Guaianases",
+          "endereco": "R. Macabu, 35",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Centro de reabilitação para pessoas com deficiência. Serviços: fisioterapia, reabilitação física, acompanhamento especializado.",
+          "coords": [-23.5540, -46.4095]
+        },
+        {
+          "nome": "CER II Jardim Soares",
+          "endereco": "R. Feliciano de Mendonça, 496",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Outro centro de reabilitação da região. Serviços: fisioterapia, reabilitação e apoio a pacientes.",
+          "coords": [-23.5570, -46.4150]
+        }
+      ]
+    },
+    {
+      "id": "caps",
+      "titulo": "Saúde Mental (CAPS)",
+      "equipamentos": [
+        {
+          "nome": "CAPS AD II Guaianases",
+          "endereco": "R. Professor Francisco Pinheiro, 139",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Centro para tratamento de álcool e drogas. Serviços: atendimento psicológico, apoio terapêutico, reabilitação.",
+          "coords": [-23.5500, -46.4100]
+        },
+        {
+          "nome": "CAPS Adulto II",
+          "endereco": "R. Serra do Mar, 56",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Atendimento para adultos com transtornos mentais. Serviços: acompanhamento psicológico, psiquiátrico, oficinas terapêuticas.",
+          "coords": [-23.5520, -46.4070]
+        },
+        {
+          "nome": "CAPS Infantojuvenil II",
+          "endereco": "R. Evaldo Calabrez, 205",
+          "horario": "07:00 às 19:00",
+          "destaque": false,
+          "descricao": "Atende crianças e adolescentes com questões de saúde mental. Serviços: acompanhamento psicológico, terapias, apoio familiar.",
+          "coords": [-23.5480, -46.4050]
+        }
+      ]
+    },
+    {
+      "id": "outros",
+      "titulo": "Outros Serviços",
+      "equipamentos": [
+        {
+          "nome": "Centro de Práticas Naturais",
+          "endereco": "R. Serra das Araras, 314",
+          "horario": "07:00 às 17:00",
+          "destaque": false,
+          "descricao": "Espaço que utiliza terapias alternativas. Serviços: acupuntura, fitoterapia, práticas integrativas.",
+          "coords": [-23.5530, -46.4180]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "categorias": [
+    {
+      "id": "trabalho",
+      "titulo": "Trabalho",
+      "equipamentos": [
+        {
+          "nome": "CATE Guaianases",
+          "endereco": "Hipólito de Camargo, 479 - Vila Lourdes",
+          "horario": "Segunda a sexta, das 08:00 às 17:00",
+          "destaque": false,
+          "descricao": "Centro que ajuda na busca por emprego. Serviços: vagas de trabalho, cursos, orientação profissional.",
+          "coords": [-23.5415, -46.4118]
+        }
+      ]
+    },
+    {
+      "id": "assistencia",
+      "titulo": "Assistência Social",
+      "equipamentos": [
+        {
+          "nome": "CRAS Guaianases",
+          "endereco": "Rua Clarínia, 19",
+          "horario": "📞 (11) 2363-9593 / 2363-9594",
+          "destaque": false,
+          "descricao": "Atende famílias em situação de vulnerabilidade. Serviços: cadastro em programas sociais, apoio familiar, orientação.",
+          "coords": [-23.5438, -46.4132]
+        },
+        {
+          "nome": "CREAS Guaianases",
+          "endereco": "Rua Nabuco de Abreu, 06",
+          "horario": "📞 (11) 2554-7115",
+          "destaque": false,
+          "descricao": "Atendimento para casos mais graves de vulnerabilidade social. Serviços: apoio a vítimas de violência, acompanhamento social.",
+          "coords": [-23.5445, -46.4148]
+        }
+      ]
+    },
+    {
+      "id": "protecao",
+      "titulo": "Proteção dos Direitos",
+      "equipamentos": [
+        {
+          "nome": "Ministério Público de São Paulo",
+          "endereco": "Rua Riachuelo, 115 - 1º andar",
+          "horario": "📞 (11) 3119-9090 (Saúde Pública)",
+          "destaque": false,
+          "descricao": "Órgão que defende os direitos da população. Serviços: denúncias, fiscalização, defesa de direitos.",
+          "coords": [-23.5505, -46.6333]
+        }
+      ]
+    },
+    {
+      "id": "conselho-tutelar",
+      "titulo": "Conselho Tutelar",
+      "equipamentos": [
+        {
+          "nome": "Conselho Tutelar de Guaianases",
+          "endereco": "Rua Centralina, 254",
+          "horario": "📞 (11) 2392-9530",
+          "destaque": false,
+          "descricao": "Protege os direitos de crianças e adolescentes. Serviços: atendimento de denúncias, orientação, encaminhamentos.",
+          "coords": [-23.5432, -46.4125]
+        },
+        {
+          "nome": "Conselho Tutelar de Lajeado",
+          "endereco": "Rua General Otelo Franco, 08/10",
+          "horario": "📞 (11) 2392-8720",
+          "destaque": false,
+          "descricao": "Atua na proteção infantil na região. Serviços: defesa dos direitos, apoio a famílias, intervenções legais.",
+          "coords": [-23.5375, -46.4078]
+        }
+      ]
+    }
+  ]
+}

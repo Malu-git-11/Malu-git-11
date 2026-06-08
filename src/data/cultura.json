@@ -1,0 +1,60 @@
+{
+    "categorias": [
+        {
+            "id": "cultura",
+            "titulo": "Cultura",
+            "equipamentos": [
+                {
+                    "nome": "Casa de Cultura de Guaianases",
+                    "endereco": "R. Castelo do Piauí, s/n",
+                    "horario": "09:00 às 21:00 (domingo até 17:00)",
+                    "destaque": false,
+                    "descricao": "Espaço cultural para atividades artísticas e sociais. Serviços: oficinas, eventos culturais, cursos, apresentações.",
+                    "coords": [
+                        -23.5506,
+                        -46.4018
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "esporte",
+            "titulo": "Esporte e Lazer (CDCs)",
+            "equipamentos": [
+                {
+                    "nome": "CDC Serra Queimada",
+                    "endereco": "Região de Guaianases",
+                    "horario": "Horário sob consulta",
+                    "destaque": false,
+                    "descricao": "Centro esportivo comunitário. Serviços: quadras, atividades esportivas, lazer.",
+                    "coords": [
+                        -23.5270,
+                        -46.4108
+                    ]
+                },
+                {
+                    "nome": "CDC Isidoro Mateus",
+                    "endereco": "Região de Guaianases",
+                    "horario": "Horário sob consulta",
+                    "destaque": false,
+                    "descricao": "Espaço para prática de esportes e convivência. Serviços: futebol, atividades recreativas.",
+                    "coords": [
+                        -23.5590,
+                        -46.4139
+                    ]
+                },
+                {
+                    "nome": "CDC Marcílio Alves Prado",
+                    "endereco": "Região de Guaianases",
+                    "horario": "08:00 às 22:00",
+                    "destaque": true,
+                    "descricao": "Centro esportivo da comunidade. Serviços: esportes, lazer e eventos.",
+                    "coords": [
+                        -23.5235,
+                        -46.4216
+                    ]
+                }
+            ]
+        }
+    ]
+}
