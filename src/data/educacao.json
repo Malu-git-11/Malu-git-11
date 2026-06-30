@@ -1,0 +1,186 @@
+{
+    "categorias": [
+        {
+            "id": "educacao",
+            "titulo": "Educação",
+            "equipamentos": [
+                {
+                    "nome": "CEU Jambeiro",
+                    "endereco": "Avenida José Pinheiro Borges, 60, Jardim Moreno, Guaianases, São Paulo - SP",
+                    "horario": "Seg a sex: 7h às 23h | Sáb e dom: 8h às 20h | Feriados: 8h às 18h",
+                    "destaque": true,
+                    "descricao": "📞 (11) 2960-2000 / 2960-2047 / 2960-2048<br>Complexo educacional e cultural que reúne CEI (Creche), EMEI, EMEF, Polo da Universidade Aberta (UniCEU), extensão da ETEC de Guaianases, biblioteca, teatro, telecentro, piscinas, quadras esportivas e academia. Estrutura acessível, com adaptações para pessoas com deficiência e atendimento educacional conforme a necessidade dos estudantes.",
+                    "coords": [
+                        -23.5381049,
+                        -46.4234233
+                    ]
+                },
+                {
+                    "nome": "CEI Diretor Geraldo Magela Peron",
+                    "endereco": "Rua Samouna, 216, Guaianases, São Paulo - SP, CEP 08460-230",
+                    "horario": "Período diurno",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2557-1626<br>Creche e Educação Infantil. Possui banheiros adaptados para alunos com deficiência ou mobilidade reduzida, parque infantil, pátio coberto e descoberto, sala de repouso, cozinha e refeitório com alimentação escolar.",
+                    "coords": [
+                        -23.547064,
+                        -46.4033107
+                    ]
+                },
+                {
+                    "nome": "EMEI Magdalena Tagliaferro",
+                    "endereco": "Rua Porto do Bezerra, 1056, Parque Guaianases, São Paulo - SP",
+                    "horario": "Período diurno",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2035-5849<br>Atende crianças da Educação Infantil. Possui parque infantil, quadra coberta, banheiros adaptados para crianças, alimentação escolar e estrutura acessível para estudantes com necessidades específicas.",
+                    "coords": [
+                        -23.528197,
+                        -46.4117239
+                    ]
+                },
+                {
+                    "nome": "Escola Estadual Governador Paulo Sarasate",
+                    "endereco": "Rua Inácio Pinto Lima, 199, Conjunto Residencial Prestes Maia, Guaianases, São Paulo - SP",
+                    "horario": "Período diurno",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2555-2305<br>Atende Ensino Fundamental (Anos Finais) e Ensino Médio. Dispõe de biblioteca, sala de leitura, quadra coberta, alimentação escolar e estrutura para acessibilidade e inclusão dos estudantes conforme as normas da rede estadual.",
+                    "coords": [
+                        -23.5663912,
+                        -46.4073304
+                    ]
+                },
+                {
+                    "nome": "EMEF Alexandre de Gusmão",
+                    "endereco": "Rua Porto do Bezerra, 25, Jardim Guaianases, São Paulo - SP",
+                    "horario": "Período diurno",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2035-1656<br>Ensino Fundamental (1º ao 9º ano). Conta com alimentação escolar, biblioteca, quadra esportiva, laboratório de informática e acessibilidade para estudantes com deficiência e atendimento educacional especializado quando necessário.",
+                    "coords": [
+                        -23.5278769,
+                        -46.4117995
+                    ]
+                },
+                {
+                    "nome": "EMEF Idêmia de Godoy",
+                    "endereco": "Rua Andes, 807, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, das 8h às 20h",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2554-4580<br>Ensino Fundamental (1º ao 9º ano). Possui biblioteca, sala de informática, alimentação escolar e atendimento inclusivo com adaptações de acessibilidade para alunos com deficiência.",
+                    "coords": [
+                        -23.5364251,
+                        -46.4065654
+                    ]
+                },
+                {
+                    "nome": "EMEF Vinte e Cinco de Janeiro",
+                    "endereco": "Rua Caranaíba, 23, Guaianases, São Paulo - SP",
+                    "horario": "Período diurno",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2557-8121 / (11) 2557-1953<br>Ensino Fundamental (1º ao 9º ano). Conta com biblioteca, quadra esportiva, alimentação escolar e estrutura acessível para estudantes com deficiência.",
+                    "coords": [
+                        -23.5445346,
+                        -46.4096946
+                    ]
+                },
+                {
+                    "nome": "EMEF Quirino Carneiro Rennó",
+                    "endereco": "Rua Camargo e Leme, 78, Vila São Geraldo, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, das 7h às 21h",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2557-1974<br>Ensino Fundamental (1º ao 9º ano). Possui biblioteca, quadra esportiva, alimentação escolar e atendimento inclusivo para estudantes com deficiência.",
+                    "coords": [
+                        -23.5545799,
+                        -46.3967822
+                    ]
+                },
+                {
+                    "nome": "Escola Estadual Aquilino Ribeiro",
+                    "endereco": "Rua Onofre Leite Meirelles, 1, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, das 7h às 23h",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2555-2788<br>Ensino Fundamental (Anos Finais) e Ensino Médio. Salas de aula adaptadas, atendimento inclusivo e acessibilidade conforme a rede estadual.",
+                    "coords": [
+                        -23.5622828,
+                        -46.4058008
+                    ]
+                },
+                {
+                    "nome": "Escola Estadual Pedro Taques",
+                    "endereco": "Rua Comandante Carlos Ruhl, 56, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, das 7h às 23h",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2557-9714<br>Ensino Fundamental (Anos Finais) e Ensino Médio. Biblioteca, quadra esportiva e recursos de acessibilidade para estudantes com deficiência.",
+                    "coords": [
+                        -23.5447436,
+                        -46.4142302
+                    ]
+                },
+                {
+                    "nome": "EMEF João de Lima Paiva",
+                    "endereco": "Rua Getulina, 278, Guaianases, São Paulo - SP",
+                    "horario": "Período diurno",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2554-4545<br>Ensino Fundamental (1º ao 9º ano). Possui Sala de Recursos Multifuncionais (AEE), banheiro adaptado, atendimento a estudantes com deficiência, biblioteca e alimentação escolar.",
+                    "coords": [
+                        -23.5417518,
+                        -46.4125366
+                    ]
+                },
+                {
+                    "nome": "EMEF Joana Angélica de Jesus",
+                    "endereco": "Rua Torre de Santiago, 425, Jardim Soares, Guaianases, São Paulo - SP",
+                    "horario": "Período diurno",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2557-8088 / 2557-5726<br>Ensino Fundamental (1º ao 9º ano). Conta com biblioteca, quadra esportiva, alimentação escolar e atendimento inclusivo para estudantes com deficiência.",
+                    "coords": [
+                        -23.5490583,
+                        -46.4006472
+                    ]
+                },
+                {
+                    "nome": "EMEF Juscelino Kubitschek de Oliveira",
+                    "endereco": "Rua Jorge Maraccini Pomfilio, 60, Cohab Juscelino, Guaianases, São Paulo - SP",
+                    "horario": "Período diurno",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2555-5752<br>Ensino Fundamental (1º ao 9º ano). Possui biblioteca, laboratório de informática, alimentação escolar e recursos de acessibilidade.",
+                    "coords": [
+                        -23.5646185,
+                        -46.3969571
+                    ]
+                },
+                {
+                    "nome": "ETEC de Guaianases",
+                    "endereco": "Rua Feliciano de Mendonça, 290, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, manhã, tarde e noite",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2551-7900<br>Ensino Médio integrado ao Técnico e cursos técnicos (como Desenvolvimento de Sistemas, Administração, Logística e outros, conforme oferta anual). Laboratórios de informática, biblioteca e atendimento a estudantes com deficiência com estrutura acessível.",
+                    "coords": [
+                        -23.5529472,
+                        -46.3996062
+                    ]
+                },
+                {
+                    "nome": "Escola Estadual Professor Sebastião Faria Zimbres",
+                    "endereco": "Rua Quinta do Paço, 45, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, das 7h às 21h30",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2557-9167<br>Ensino Fundamental e Ensino Médio. Salas acessíveis e atendimento educacional inclusivo.",
+                    "coords": [
+                        -23.5527251,
+                        -46.4088237
+                    ]
+                },
+                {
+                    "nome": "Escola Estadual Ernestina Del Buono Trama",
+                    "endereco": "Rua Feliciano de Mendonça, 418, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, das 7h às 23h",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2557-9399<br>Ensino Fundamental e Ensino Médio. Biblioteca, alimentação escolar e recursos de acessibilidade.",
+                    "coords": [
+                        -23.5533511,
+                        -46.3991205
+                    ]
+                }
+            ]
+        }
+    ]
+}
