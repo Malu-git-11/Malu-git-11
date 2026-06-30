@@ -2,7 +2,7 @@
     "categorias": [
         {
             "id": "ceu-cei",
-            "titulo": "CEU, CEI e EMEI",
+            "titulo": "CEU e CEI (Educação Infantil)",
             "equipamentos": [
                 {
                     "nome": "CEU Jambeiro",
@@ -41,7 +41,7 @@
         },
         {
             "id": "emef",
-            "titulo": "EMEF",
+            "titulo": "EMEF (Ensino Fundamental Municipal)",
             "equipamentos": [
                 {
                     "nome": "EMEF Alexandre de Gusmão",
@@ -123,7 +123,7 @@
             ]
         },
         {
-            "id": "escolas-estaduais",
+            "id": "estaduais",
             "titulo": "Escolas Estaduais",
             "equipamentos": [
                 {
@@ -185,7 +185,7 @@
         },
         {
             "id": "etec",
-            "titulo": "ETEC",
+            "titulo": "ETEC (Ensino Técnico)",
             "equipamentos": [
                 {
                     "nome": "ETEC de Guaianases",
