@@ -1,8 +1,8 @@
 {
     "categorias": [
         {
-            "id": "educacao",
-            "titulo": "Educação",
+            "id": "ceu-cei",
+            "titulo": "CEU, CEI e EMEI",
             "equipamentos": [
                 {
                     "nome": "CEU Jambeiro",
@@ -36,18 +36,13 @@
                         -23.528197,
                         -46.4117239
                     ]
-                },
-                {
-                    "nome": "Escola Estadual Governador Paulo Sarasate",
-                    "endereco": "Rua Inácio Pinto Lima, 199, Conjunto Residencial Prestes Maia, Guaianases, São Paulo - SP",
-                    "horario": "Período diurno",
-                    "destaque": false,
-                    "descricao": "📞 (11) 2555-2305<br>Atende Ensino Fundamental (Anos Finais) e Ensino Médio. Dispõe de biblioteca, sala de leitura, quadra coberta, alimentação escolar e estrutura para acessibilidade e inclusão dos estudantes conforme as normas da rede estadual.",
-                    "coords": [
-                        -23.5663912,
-                        -46.4073304
-                    ]
-                },
+                }
+            ]
+        },
+        {
+            "id": "emef",
+            "titulo": "EMEF",
+            "equipamentos": [
                 {
                     "nome": "EMEF Alexandre de Gusmão",
                     "endereco": "Rua Porto do Bezerra, 25, Jardim Guaianases, São Paulo - SP",
@@ -93,28 +88,6 @@
                     ]
                 },
                 {
-                    "nome": "Escola Estadual Aquilino Ribeiro",
-                    "endereco": "Rua Onofre Leite Meirelles, 1, Guaianases, São Paulo - SP",
-                    "horario": "Segunda a sexta, das 7h às 23h",
-                    "destaque": false,
-                    "descricao": "📞 (11) 2555-2788<br>Ensino Fundamental (Anos Finais) e Ensino Médio. Salas de aula adaptadas, atendimento inclusivo e acessibilidade conforme a rede estadual.",
-                    "coords": [
-                        -23.5622828,
-                        -46.4058008
-                    ]
-                },
-                {
-                    "nome": "Escola Estadual Pedro Taques",
-                    "endereco": "Rua Comandante Carlos Ruhl, 56, Guaianases, São Paulo - SP",
-                    "horario": "Segunda a sexta, das 7h às 23h",
-                    "destaque": false,
-                    "descricao": "📞 (11) 2557-9714<br>Ensino Fundamental (Anos Finais) e Ensino Médio. Biblioteca, quadra esportiva e recursos de acessibilidade para estudantes com deficiência.",
-                    "coords": [
-                        -23.5447436,
-                        -46.4142302
-                    ]
-                },
-                {
                     "nome": "EMEF João de Lima Paiva",
                     "endereco": "Rua Getulina, 278, Guaianases, São Paulo - SP",
                     "horario": "Período diurno",
@@ -146,16 +119,44 @@
                         -23.5646185,
                         -46.3969571
                     ]
+                }
+            ]
+        },
+        {
+            "id": "escolas-estaduais",
+            "titulo": "Escolas Estaduais",
+            "equipamentos": [
+                {
+                    "nome": "Escola Estadual Governador Paulo Sarasate",
+                    "endereco": "Rua Inácio Pinto Lima, 199, Conjunto Residencial Prestes Maia, Guaianases, São Paulo - SP",
+                    "horario": "Período diurno",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2555-2305<br>Atende Ensino Fundamental (Anos Finais) e Ensino Médio. Dispõe de biblioteca, sala de leitura, quadra coberta, alimentação escolar e estrutura para acessibilidade e inclusão dos estudantes conforme as normas da rede estadual.",
+                    "coords": [
+                        -23.5663912,
+                        -46.4073304
+                    ]
                 },
                 {
-                    "nome": "ETEC de Guaianases",
-                    "endereco": "Rua Feliciano de Mendonça, 290, Guaianases, São Paulo - SP",
-                    "horario": "Segunda a sexta, manhã, tarde e noite",
+                    "nome": "Escola Estadual Aquilino Ribeiro",
+                    "endereco": "Rua Onofre Leite Meirelles, 1, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, das 7h às 23h",
                     "destaque": false,
-                    "descricao": "📞 (11) 2551-7900<br>Ensino Médio integrado ao Técnico e cursos técnicos (como Desenvolvimento de Sistemas, Administração, Logística e outros, conforme oferta anual). Laboratórios de informática, biblioteca e atendimento a estudantes com deficiência com estrutura acessível.",
+                    "descricao": "📞 (11) 2555-2788<br>Ensino Fundamental (Anos Finais) e Ensino Médio. Salas de aula adaptadas, atendimento inclusivo e acessibilidade conforme a rede estadual.",
                     "coords": [
-                        -23.5529472,
-                        -46.3996062
+                        -23.5622828,
+                        -46.4058008
+                    ]
+                },
+                {
+                    "nome": "Escola Estadual Pedro Taques",
+                    "endereco": "Rua Comandante Carlos Ruhl, 56, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, das 7h às 23h",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2557-9714<br>Ensino Fundamental (Anos Finais) e Ensino Médio. Biblioteca, quadra esportiva e recursos de acessibilidade para estudantes com deficiência.",
+                    "coords": [
+                        -23.5447436,
+                        -46.4142302
                     ]
                 },
                 {
@@ -178,6 +179,23 @@
                     "coords": [
                         -23.5533511,
                         -46.3991205
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "etec",
+            "titulo": "ETEC",
+            "equipamentos": [
+                {
+                    "nome": "ETEC de Guaianases",
+                    "endereco": "Rua Feliciano de Mendonça, 290, Guaianases, São Paulo - SP",
+                    "horario": "Segunda a sexta, manhã, tarde e noite",
+                    "destaque": false,
+                    "descricao": "📞 (11) 2551-7900<br>Ensino Médio integrado ao Técnico e cursos técnicos (como Desenvolvimento de Sistemas, Administração, Logística e outros, conforme oferta anual). Laboratórios de informática, biblioteca e atendimento a estudantes com deficiência com estrutura acessível.",
+                    "coords": [
+                        -23.5529472,
+                        -46.3996062
                     ]
                 }
             ]
